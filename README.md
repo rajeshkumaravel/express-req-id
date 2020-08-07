@@ -1,5 +1,5 @@
 # express-req-id
-[![NPM version][npm-image]][npm-url] ![expreeReqId](https://github.com/rajeshkumaravel/express-req-id/workflows/express-req-id/badge.svg?branch=master)
+[![NPM version][npm-image]][npm-url] ![express-req-id](https://github.com/rajeshkumaravel/express-req-id/workflows/express-req-id/badge.svg?branch=master) [![Coverage Status](https://coveralls.io/repos/github/rajeshkumaravel/express-req-id/badge.svg?branch=master)](https://coveralls.io/github/rajeshkumaravel/express-req-id?branch=master)
 
 - Generate CUID / UUID for express request and add it to `X-Request-Id` header.
 - In case request contains `X-Request-Id` header, uses its value instead.
@@ -16,13 +16,13 @@ $ npm install --save express-req-id
 **2. Example**
 
 ```js
-var express     = require('express');
-var app         = express();
-var expreereqid = require('express-req-id')({
+var express       = require('express');
+var app           = express();
+var expressreqid  = require('express-req-id')({
   type: 'cuid'  // `uuid` or `cuid`
 });
 
-app.use(expreereqid);
+app.use(expressreqid);
 
 app.listen(3001, () => {
   console.log('Server running on port 3001');
