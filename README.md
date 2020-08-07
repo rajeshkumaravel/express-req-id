@@ -1,4 +1,4 @@
-# express-req-id
+# node-express-req-id
 [![NPM version][npm-image]][npm-url] ![express-req-id](https://github.com/rajeshkumaravel/express-req-id/workflows/express-req-id/badge.svg?branch=master) [![Coverage Status](https://coveralls.io/repos/github/rajeshkumaravel/express-req-id/badge.svg?branch=master)](https://coveralls.io/github/rajeshkumaravel/express-req-id?branch=master)
 
 - Generate CUID / UUID for express request and add it to `X-Request-Id` header.
@@ -10,7 +10,7 @@
 **1. Install**
 
 ```
-$ npm install --save express-req-id
+$ npm install --save node-express-req-id
 ```
 
 **2. Example**
@@ -18,7 +18,7 @@ $ npm install --save express-req-id
 ```js
 var express       = require('express');
 var app           = express();
-var expressreqid  = require('express-req-id')({
+var expressreqid  = require('node-express-req-id')({
   type: 'cuid'  // `uuid` or `cuid`
 });
 
@@ -44,7 +44,7 @@ app.get('/test', (req, res, next) => {
 
 # API
 
-### express-req-id([options])
+### node-express-req-id([options])
 
 Returns either `uuid` or `cuid` middleware and appends to request object
 
@@ -59,7 +59,7 @@ Returns either `uuid` or `cuid` middleware and appends to request object
 
 # License
 
-The express-req-id is licensed under the MIT License. See LICENSE for more information.
+The node-express-req-id is licensed under the MIT License. See LICENSE for more information.
 
-[npm-url]: https://npmjs.org/package/express-req-id
-[npm-image]: http://img.shields.io/npm/v/express-req-id.svg
+[npm-url]: https://npmjs.org/package/node-express-req-id
+[npm-image]: http://img.shields.io/npm/v/node-express-req-id.svg

@@ -1,5 +1,5 @@
 {
-  "name": "express-req-id",
+  "name": "node-express-req-id",
   "version": "1.0.0",
   "description": "Express middleware for adding unique request id using uuid / cuid",
   "main": "./lib/index.js",
