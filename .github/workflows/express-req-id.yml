@@ -1,0 +1,41 @@
+name: express-req-id
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Using Node Version ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Installing yarn
+      run: npm install -g yarn
+
+    - name: Installing project dependencies
+      if: steps.yarn-cache.outputs.cache-hit != 'true' # Over here!
+      run: yarn
+
+    - name: Executing test case(s)
+      run: npm run test
+
+    - name: Generating coverage report
+      run: npm run coverage
+
+    - name: Posting LCOV coverage data to Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}

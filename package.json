@@ -1,0 +1,44 @@
+{
+  "name": "express-req-id",
+  "version": "1.0.0",
+  "description": "Express middleware for adding unique request id using uuid / cuid",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "nyc --reporter=lcov mocha",
+    "coverage": "nyc report --reporter=text",
+    "coverage-report": "nyc --reporter=html mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajeshkumaravel/express-req-id.git"
+  },
+  "keywords": [
+    "nodejs request id",
+    "middleware",
+    "request id",
+    "express",
+    "uuid",
+    "cuid",
+    "request",
+    "id",
+    "X-Request-Id"
+  ],
+  "author": "RAJESH K",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rajeshkumaravel/express-req-id/issues"
+  },
+  "homepage": "https://github.com/rajeshkumaravel/express-req-id#readme",
+  "dependencies": {
+    "cuid": "^2.1.8",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "coveralls": "^3.1.0",
+    "express": "^4.17.1",
+    "mocha": "^8.1.1",
+    "nyc": "^15.1.0"
+  }
+}
