@@ -5,6 +5,8 @@
 - In case request contains `X-Request-Id` header, uses its value instead.
 - By default identifer value is added to response header
 
+---
+
 # Quickstart
 
 **1. Install**
